@@ -13,13 +13,17 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.container {
+    padding: 10px;
+}
+
 a {
     text-decoration: none;
     color: inherit;
     padding: 0.1rem;
 }
 
-/* Header */
+/* HEADER */
 header {
     background-color: var(--orange);
     color: white;
@@ -30,10 +34,14 @@ header {
 }
 
 nav {
-    height: 3.5rem;
+    height: 4rem;
     padding: 1rem 0px;
     justify-content: space-between;
     align-items: center;
+}
+
+nav img {
+    max-height: 1.5rem;
 }
 
 /* MAIN */
@@ -44,16 +52,19 @@ nav {
     justify-content: space-between;
 }
 
+/* COLUMN */
 .column {
     flex-basis: 32%;
-    /* position: relative; */
+    display: inline-block;
+    position: relative;
+
     /* debug */
-    background-color: #1a1a1a;
+    /* background-color: #1a1a1a; */
 }
 
+/* CARD  */
 .card {
-    position: relative;
-    display: inline-block;
+    position: static;
 }
 
 .card .img-top {
@@ -81,24 +92,41 @@ nav {
     z-index: 2;
 }
 
-.discount {
-    display: inline-block;
-    background-color: var(--red);
-    padding: var(--paddings);
-    color: var(--white);
-    position: relative;
-    bottom: 4rem;
-    z-index: 3;
+.labelposition {
+    position: absolute;
 }
 
-.labelsos {
-    display: inline-block;
+.label {
     color: var(--white);
-    background-color: var(--green);
     padding: var(--paddings);
-    position: relative;
-    bottom: 4rem;
     z-index: 2;
+    bottom: 4rem;
+    position: relative;
+    display: inline-block;
+}
+
+.discount.label {
+    background-color: var(--red);
+}
+
+.label.sos {
+    background-color: var(--green);
+}
+
+/* CARD TEXT  */
+.card-text {
+    font-size: .6rem;
+    margin-bottom: 2rem;
+}
+
+.discount-price {
+    color: var(--red);
+    font-weight: 700;
+}
+
+.full-price {
+    text-decoration: line-through;
+    font-weight: 700;
 }
 
 /* FOOTER */

@@ -109,6 +109,11 @@ nav img {
     z-index: 2;
 }
 
+.heart:hover {
+    color: red;
+    cursor: pointer;
+}
+
 /* LABEL  */
 .labelposition {
     position: absolute;
